@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 类似于实例化接口的子类操作 -->
+	<bean id="customerDAO" class="cn.hl.dao.impl.JdbcCustomerDAO">
+	<!-- 给JdbcCustomerDAO类中的dataSource属性注入值，ref为bean的id-->
+	<property name="dataSource" ref="dataSource" />
+	</bean>
+</beans>
